@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleMenu.css">
+    <title>Document</title>
+
+<style>
+
+.details{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+
+.details table thead td{
+   font-weight: 600;
+}
+
+.details .recentOrders table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0, 0, 0.1);
+}
+
+.details .recentOrders table tr:last-child{
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+
+.details .recentOrders table tr td{
+    padding: 10px;
+
+}
+
+
+.details .recentOrders table tr td:last-child{
+    text-align: end;
+}
+
+
+    </style>
+
+
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+    
+            $("#submit").click(function(){
+                $("#drop").val("").replaceWith("");
+                $("#name").val("");
+                $("#id").val("");
+                $("#class").val("");
+            });
+            
+            $("#submit").dblclick(function(){
+                $("#drop2").val("").replaceWith("");
+                $("#name").val("");
+                $("#id").val("");
+                $("#class").val("");
+            });
+
+        });
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+<div class="container">
+    <div class="navigation">
+    <ul>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="globe-outline"></ion-icon></span>
+                    <span class="title">Attendance Online</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="TeacherMenu.php">
+                    <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+                    <span class="title">Teacher Name</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="createClass.php?teaName=Ho Kwan Cheng">
+                    <span class="icon"><ion-icon name="add-outline"></ion-icon></span>
+                    <span class="title">Create Class</span>
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="ViewClassDetail.html">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <span class="title">View Class Detail</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="ViewStudentList.html">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <span class="title">View Student list</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="teaSeacrchAt.html">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <span class="title">Search Student Attendance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="teaSerVieEdiStu.php">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <span class="title">Edit View Student Information</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="teaReport.html">
+                    <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                    <span class="title">Generate Class Reports</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="addStudent.html">
+                    <span class="icon"><ion-icon name="add-outline"></ion-icon></span>
+                    <span class="title">Add Student</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="DropStudent.html">
+                    <span class="icon"><ion-icon name="remove-outline"></ion-icon></span>
+                    <span class="title">Drop Student</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="teaViewEditAc.html">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="title">Personal Account</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="Login.html">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign out</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <!-- search---->
+            <!-- <div class="search">
+                <label>
+                    <input type="text" placeholder="Search Here">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div> -->
+            
+            <!---user name-->
+            <!-- <div class="user">
+                <img src="bigcat.jpg" width="60" height="60">
+            </div> -->
+        </div>
+ 
+        <div class="cardBox">
+
+            <div class="card">
+                <div class="Name">Teacher Name :</div>     
+            </div>
+
+            <div class="card">
+                <div class="Name">Ho Kwan Cheng</div>     
+            </div>
+
+            <div class="card">
+                <div class="Name">Class Number :</div>     
+            </div>
+
+            <div class="card">
+                <div class="classNumber">ITP11400</div>
+            </div>
+        </div>
+        
+        <div class="details">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>list for 6A :</h2>
+                    <a href="#" class="btn">View all</a>
+                </div>
+                <table >
+                    <thead>
+                        <tr>
+                        <td>Student ID</td>
+                        <td>Class</td>
+                        <td>Student Name</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>6A</td>
+                            <td>Ho Man Chung</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>6A</td>
+                            <td>Li Chi Fung</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>03</td>
+                            <td>6A</td>
+                            <td>Chen Tai Men</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>04</td>
+                            <td>6A</td>
+                            <td>Wong Kun Hui</td>       
+                       
+                        </tr>
+
+                        <tr>
+                            <td>05</td>
+                            <td>6A</td>
+                            <td>Wong Ka Hong</td>
+                               
+                        </tr>
+                       
+                        <tr id="drop2">
+                            <td>06</td>
+                            <td>6A</td>
+                            <td>Leung Chi Shan</td>
+            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>list for 1B :</h2>
+                    <a href="#" class="btn">View all</a>
+                </div>
+                <table >
+                    <thead>
+                        <tr>
+                        <td>Student ID</td>
+                        <td>Class</td>
+                        <td>Student Name</td>
+                    
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>01</td>
+                        <td>1B</td>
+                        <td>Ho Fung Chung</td>   
+                      
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>1B</td>
+                            <td>Li Chi Chung</td>
+                      
+                        </tr>
+
+                        <tr>
+                            <td>03</td>
+                            <td>1B</td>
+                            <td>Chen Yan Chun</td>
+                         
+                        </tr>
+
+                        <tr>
+                            <td>04</td>
+                        <td>1B</td>
+                        <td>An Kun Hin</td>
+                      
+                        </tr>
+
+                        <tr>
+                            <td>05</td>
+                        <td>1B</td>
+                        <td>Wong Ka Jin</td>
+                      
+                        </tr>
+
+                        <tr>
+                            <td>06</td>
+                        <td>1B</td>
+                        <td>Li Ka Chun</td>    
+                      
+                        </tr>
+
+                        <tr>
+                            <td>07</td>
+                        <td>1B</td>
+                        <td>Leung Yin</td>
+                       
+                        </tr>
+                       
+                        <tr id="drop">
+                        <td>08</td>
+                        <td>1B</td>
+                        <td>Leung Xin Ru</td>
+                        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="recentCustomer">
+                <div class="cardHeader">
+                    <h2>Drop Student</h2>
+                </div>
+                <div>
+                    <table>
+
+                    <thead>
+
+                        <tr>
+                            <td>
+                                <h4>Enter the Student ID:</h4>
+                                <input id="id" type="text"  placeholder="ID">
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <h4>Enter the Student Class:</h4>
+                                <input id="class" type="text"  placeholder="Class">
+                            </td>
+
+                        </tr>
+
+                            <tr>
+                                <td>
+                                <h4>Enter the Student name:</h4>
+                                <input id="name" type="text"  placeholder="Name"></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><button id="submit">Submit</button></td>
+                            </tr>
+                    
+                          
+
+                    </thead>
+
+                    </table>
+                </div>
+            </div>
+
+
+
+    </div>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach( (item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) => 
+        item.addEventListener('mouseover',activeLink));
+
+    </script>
+
+</body>
+</html>
